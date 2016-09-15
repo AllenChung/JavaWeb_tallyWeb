@@ -53,4 +53,15 @@ public class UserDAOProxy implements UserDAO {
 		return flag;
 	}
 
+	@Override
+	public int findId(User user) throws Exception {
+		try {
+			return dao.findId(user);
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			dbc.close();
+		}
+	}
+
 }
