@@ -60,4 +60,23 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return flag;
 	}
+	
+	@Override
+	/**
+	 * 若用户存在则返回id，若不存在则返回-1
+	 */
+	public int findId(User user) throws Exception {
+		String sql = "select id from user where (userName, password) = (?, ?)";
+		try (PreparedStatement prepareStatement = connection.prepareStatement(sql)) {
+			prepareStatement.setString(1, user.getUserName());
+			prepareStatement.setString(2, user.getPassword());
+			ResultSet result = prepareStatement.executeQuery();
+			if (result.next()) {
+				return result.getInt(1);
+			}
+		} catch (Exception e) {
+			throw e;
+		}
+		return -1;
+	}
 }

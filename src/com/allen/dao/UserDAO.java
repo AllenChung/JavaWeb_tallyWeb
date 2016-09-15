@@ -11,4 +11,6 @@ public interface UserDAO {
 	public boolean exist(String userName, String password) throws Exception;
 	
 	public boolean exist(String userName) throws Exception;
+	
+	public int findId(User user) throws Exception;
 }

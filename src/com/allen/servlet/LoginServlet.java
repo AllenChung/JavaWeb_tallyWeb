@@ -13,9 +13,14 @@ import com.allen.vo.User;
 public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		try {
-			if (DAOFactory.getUserDAOInstance().exist(req.getParameter("userName"), req.getParameter("password")))
-				req.getRequestDispatcher("/Missing.jsp").forward(req, resp);
-			else {
+			User user = new User();
+			user.setPassword(req.getParameter("password"));
+			user.setUserName(req.getParameter("userName"));
+			if (DAOFactory.getUserDAOInstance().exist(user.getUserName(), user.getPassword())) {
+				user.setId(DAOFactory.getUserDAOInstance().findId(user));
+				req.getSession().setAttribute("user", user);
+				req.getRequestDispatcher("/catalog.jsp").forward(req, resp);
+			} else {
 				req.setAttribute("errorMessage", "用户名或密码错误");
 				req.getRequestDispatcher("/Index.jsp").forward(req, resp);
 			}
