@@ -1,7 +1,5 @@
 package com.allen.dao;
 
-import java.util.List;
-
 import com.allen.vo.User;
 
 public interface UserDAO {

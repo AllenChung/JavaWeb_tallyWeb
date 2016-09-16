@@ -12,7 +12,30 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-	
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>com.allen/jstl/core</taglib-uri>
+			<taglib-location>/WEB-INF/c.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>com.allen/jstl/fmt</taglib-uri>
+			<taglib-location>/WEB-INF/fmt.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>com.allen/jstl/fn</taglib-uri>
+			<taglib-location>/WEB-INF/fn.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>com.allen/jstl/sql</taglib-uri>
+			<taglib-location>/WEB-INF/sql.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>com.allen/jstl/x</taglib-uri>
+			<taglib-location>/WEB-INF/x.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>com.allen.filter.EncodingFilter</filter-class>
@@ -25,7 +48,7 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
+
 	<servlet>
 		<servlet-name>RegisterServlet</servlet-name>
 		<servlet-class>com.allen.servlet.RegisterServlet</servlet-class>
@@ -51,6 +74,15 @@
 	<servlet-mapping>
 		<servlet-name>AddItemServlet</servlet-name>
 		<url-pattern>/AddItemServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CheckServlet</servlet-name>
+		<servlet-class>com.allen.servlet.CheckServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckServlet</servlet-name>
+		<url-pattern>/CheckServlet</url-pattern>
 	</servlet-mapping>
 
 	<!-- ======================== Introduction ============================== -->

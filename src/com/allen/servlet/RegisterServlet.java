@@ -11,6 +11,9 @@ import com.allen.pojo.Register;
 import com.allen.vo.User;
 
 public class RegisterServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = -6218346978859666431L;
+
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		User user = new User();
 		user.setUserName(req.getParameter("userName"));

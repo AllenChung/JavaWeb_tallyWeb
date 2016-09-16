@@ -9,6 +9,7 @@
 <body>
 	<ul>
 		<li><a href="${pageContext.request.contextPath }/add.jsp">记账</a></li>
+		<li><a href="${pageContext.request.contextPath }/CheckServlet"}>查看</a></li>
 	</ul>
 </body>
 </html>
