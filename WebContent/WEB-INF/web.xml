@@ -55,7 +55,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>RegisterServlet</servlet-name>
-		<url-pattern>/RegisterServlet</url-pattern>
+		<url-pattern>/Register</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -64,7 +64,16 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
-		<url-pattern>/LoginServlet</url-pattern>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddServlet</servlet-name>
+		<servlet-class>com.allen.servlet.AddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddServlet</servlet-name>
+		<url-pattern>/Add</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -73,7 +82,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AddItemServlet</servlet-name>
-		<url-pattern>/AddItemServlet</url-pattern>
+		<url-pattern>/AddItem</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -82,7 +91,34 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>CheckServlet</servlet-name>
-		<url-pattern>/CheckServlet</url-pattern>
+		<url-pattern>/Check</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>com.allen.servlet.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/Delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteItemServlet</servlet-name>
+		<servlet-class>com.allen.servlet.DeleteItemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteItemServlet</servlet-name>
+		<url-pattern>/DeleteItem</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CatalogServlet</servlet-name>
+		<servlet-class>com.allen.servlet.CatalogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CatalogServlet</servlet-name>
+		<url-pattern>/Catalog</url-pattern>
 	</servlet-mapping>
 
 	<!-- ======================== Introduction ============================== -->

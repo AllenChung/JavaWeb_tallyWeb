@@ -36,7 +36,7 @@ public class AddItemServlet extends HttpServlet {
 			} else {
 				req.setAttribute("result", "º«’À ß∞‹");
 			}
-			req.getRequestDispatcher("/add.jsp").forward(req, resp);;
+			req.getRequestDispatcher("/Add.jsp").forward(req, resp);;
 		} catch (Exception e) {
 			
 			e.printStackTrace();

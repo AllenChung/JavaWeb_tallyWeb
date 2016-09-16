@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>注册页面</h1>
-	<form action="${pageContext.request.contextPath }/RegisterServlet" method="post">
+	<form action="${pageContext.request.contextPath }/Register" method="post">
 	<h3>${errors["errorName"] }</h3><br>
 		user name: <input type="text" name="userName"/><br>
 		password: <input type="password" name="password"/><br>

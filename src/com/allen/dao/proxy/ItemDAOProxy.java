@@ -19,21 +19,30 @@ public class ItemDAOProxy implements ItemDAO {
 	
 	@Override
 	public boolean doAdd(Item item) throws Exception {
-		boolean flag = false;
 		try {
-			flag = dao.doAdd(item);
+			return dao.doAdd(item);
 		} catch (Exception e) {
 			throw e;
 		} finally {
 			dbc.close();
 		}
-		return flag;
 	}
 
 	@Override
 	public List<showItem> findAll(int user_id) throws Exception {
 		try {
 			return dao.findAll(user_id);
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			dbc.close();
+		}
+	}
+
+	@Override
+	public boolean doDelete(int id) throws Exception {
+		try {
+			return dao.doDelete(id);
 		} catch (Exception e) {
 			throw e;
 		} finally {
