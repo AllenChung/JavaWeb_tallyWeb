@@ -15,6 +15,9 @@ import com.allen.vo.Item;
 import com.allen.vo.User;
 
 public class AddItemServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 8450078750332418801L;
+
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Item item = new Item();
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");

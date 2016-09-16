@@ -1,8 +1,11 @@
 package com.allen.dao.proxy;
 
+import java.util.List;
+
 import com.allen.dao.ItemDAO;
 import com.allen.dao.impl.ItemDAOImpl;
 import com.allen.dbc.DatabaseConnection;
+import com.allen.pojo.showItem;
 import com.allen.vo.Item;
 
 public class ItemDAOProxy implements ItemDAO {
@@ -25,6 +28,17 @@ public class ItemDAOProxy implements ItemDAO {
 			dbc.close();
 		}
 		return flag;
+	}
+
+	@Override
+	public List<showItem> findAll(int user_id) throws Exception {
+		try {
+			return dao.findAll(user_id);
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			dbc.close();
+		}
 	}
 
 }

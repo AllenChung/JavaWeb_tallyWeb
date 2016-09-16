@@ -11,6 +11,9 @@ import com.allen.factory.DAOFactory;
 import com.allen.vo.User;
 
 public class LoginServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 7283700532242964678L;
+
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		try {
 			User user = new User();
