@@ -18,4 +18,6 @@ public interface ItemDAO {
 	 * 查询所有记账记录
 	 */
 	public List<showItem> findAll(int user_id) throws Exception;
+	
+	public boolean doDelete(int id) throws Exception;
 }

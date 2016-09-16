@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>登录页面</h1>
-	<form action="${pageContext.request.contextPath }/LoginServlet" method="post">
+	<form action="${pageContext.request.contextPath }/Login" method="post">
 	<h3>${errorMessage }</h3>
 		user name: <input type="text" name="userName"/><br>
 		password: <input type="password" name="password"/><br>

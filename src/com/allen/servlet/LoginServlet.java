@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 			if (DAOFactory.getUserDAOInstance().exist(user.getUserName(), user.getPassword())) {
 				user.setId(DAOFactory.getUserDAOInstance().findId(user));
 				req.getSession().setAttribute("user", user);
-				req.getRequestDispatcher("/catalog.jsp").forward(req, resp);
+				req.getRequestDispatcher("/Catalog.jsp").forward(req, resp);
 			} else {
 				req.setAttribute("errorMessage", "用户名或密码错误");
 				req.getRequestDispatcher("/Index.jsp").forward(req, resp);

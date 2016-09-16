@@ -17,7 +17,7 @@ public class CheckServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 			req.setAttribute("items", DAOFactory.getItemDAOInstance().findAll(((User)req.getSession().getAttribute("user")).getId()));
-			req.getRequestDispatcher("/check.jsp").forward(req, resp);
+			req.getRequestDispatcher("/Check.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

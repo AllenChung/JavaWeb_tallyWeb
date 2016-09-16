@@ -8,8 +8,9 @@
 </head>
 <body>
 	<ul>
-		<li><a href="${pageContext.request.contextPath }/add.jsp">记账</a></li>
-		<li><a href="${pageContext.request.contextPath }/CheckServlet"}>查看</a></li>
+		<li><a href="${pageContext.request.contextPath }/Add">记账</a></li>
+		<li><a href="${pageContext.request.contextPath }/Check">查看</a></li>
+		<li><a href="${pageContext.request.contextPath }/Delete">删除</a></li>
 	</ul>
 </body>
 </html>

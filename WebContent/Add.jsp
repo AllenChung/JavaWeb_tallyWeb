@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="${pageContext.request.contextPath }/catalog.jsp">返回</a><br>
-	<form action="${pageContext.request.contextPath }/AddItemServlet" method="post">
-		日期：<input type="text" name="date"/> (格式：yyyyMMdd)</h4><br>
+	<a href="${pageContext.request.contextPath }/Catalog">返回</a><br>
+	<form action="${pageContext.request.contextPath }/AddItem" method="post">
+		日期：<input type="text" name="date"/> (格式：yyyyMMdd)<br>
 		地点：<input type="text" name="location"/><br>
 		详细：<input type="text" name="detail"/><br>
 		金额：<input type="text" name="amount"/><br>
