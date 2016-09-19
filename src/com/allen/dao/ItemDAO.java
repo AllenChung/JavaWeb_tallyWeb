@@ -20,4 +20,6 @@ public interface ItemDAO {
 	public List<showItem> findAll(int user_id) throws Exception;
 	
 	public boolean doDelete(int id) throws Exception;
+	
+	public boolean exist(int id) throws Exception;
 }

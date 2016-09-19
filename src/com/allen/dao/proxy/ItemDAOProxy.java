@@ -50,4 +50,14 @@ public class ItemDAOProxy implements ItemDAO {
 		}
 	}
 
+	@Override
+	public boolean exist(int id) throws Exception {
+		try {
+			return dao.exist(id);
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			dbc.close();
+		}
+	}
 }
