@@ -69,5 +69,22 @@ public class ItemDAOImpl implements ItemDAO {
 		}
 		return false;
 	}
+	
+	@Override
+	public boolean exist(int id) throws Exception {
+		String sql = "select * from item where id=?";
+		try (PreparedStatement prepareStatement = connection.prepareStatement(sql)) {
+			prepareStatement.setInt(1, id);
+			ResultSet result = prepareStatement.executeQuery();
+			if (result.next()) {
+				return true;
+			} else {
+				return false;
+			}
+			
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 
 }

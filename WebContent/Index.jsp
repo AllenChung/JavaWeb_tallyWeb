@@ -9,9 +9,8 @@
 <body>
 	<h1>登录页面</h1>
 	<form action="${pageContext.request.contextPath }/Login" method="post">
-	<h3>${errorMessage }</h3>
-		user name: <input type="text" name="userName"/><br>
-		password: <input type="password" name="password"/><br>
+		user name: <input type="text" name="userName"/>${errorUserName }<br/>
+		password: <input type="password" name="password"/>${errorPassword }<br/>
 		<input type="submit" value="login"/>
 		<input type="reset" value="reset"/><br>
 	</form>

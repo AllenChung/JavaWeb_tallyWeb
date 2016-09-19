@@ -60,7 +60,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return flag;
 	}
-	
+
 	@Override
 	/**
 	 * 若用户存在则返回id，若不存在则返回-1
@@ -79,4 +79,6 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return -1;
 	}
+
+
 }

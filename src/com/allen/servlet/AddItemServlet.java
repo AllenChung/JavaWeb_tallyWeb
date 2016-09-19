@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +17,7 @@ import com.allen.vo.Item;
 import com.allen.vo.User;
 
 public class AddItemServlet extends HttpServlet {
-	
+
 	private static final long serialVersionUID = 8450078750332418801L;
 
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -23,22 +25,27 @@ public class AddItemServlet extends HttpServlet {
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
 		try {
 			item.setDate(new Date(format.parse(req.getParameter("date")).getTime()));
+
 		} catch (ParseException e) {
 			e.printStackTrace();
+
 		}
+		item.setAmount(Double.parseDouble(req.getParameter("amount")));
 		item.setLocation(req.getParameter("location"));
 		item.setDetail(req.getParameter("detail"));
-		item.setAmount(Double.parseDouble(req.getParameter("amount")));
-		item.setUser_id(((User)req.getSession().getAttribute("user")).getId());
+		item.setUser_id(((User) req.getSession().getAttribute("user")).getId());
+
 		try {
 			if (DAOFactory.getItemDAOInstance().doAdd(item)) {
 				req.setAttribute("result", "记账成功");
+
 			} else {
 				req.setAttribute("result", "记账失败");
+
 			}
-			req.getRequestDispatcher("/Add.jsp").forward(req, resp);;
+			req.getRequestDispatcher("/Add.jsp").forward(req, resp);
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
 		}
 	}
@@ -47,4 +54,5 @@ public class AddItemServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		this.doPost(req, resp);
 	}
+
 }

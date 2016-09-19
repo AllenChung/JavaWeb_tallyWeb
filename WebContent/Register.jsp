@@ -9,9 +9,8 @@
 <body>
 	<h1>注册页面</h1>
 	<form action="${pageContext.request.contextPath }/Register" method="post">
-	<h3>${errors["errorName"] }</h3><br>
-		user name: <input type="text" name="userName"/><br>
-		password: <input type="password" name="password"/><br>
+		user name: <input type="text" name="userName"/>${errors["errorName"] }<br/>
+		password: <input type="password" name="password"/>${errors["errorPassword"] }<br/>
 		<input type="submit" value="regist"/>
 		<input type="reset" value="reset"/><br>
 	</form>
