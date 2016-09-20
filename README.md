@@ -5,6 +5,8 @@
 
 * 工具：Eclipse for Java EE + MySQL
 
+***
+
  使用方法：
 
 1. 导入jar包：jsp-api.jar + servlet-api.jar + taglibs-standard-compat-1.2.5.jar + taglibs-standard-impl-1.2.5.jar + taglibs-standard-jstlel-1.2.5.jar + taglibs-standard-spec-1.2.5.jar 
@@ -12,7 +14,7 @@
 
 2. 建立数据库：
 
- create database tally;
+ 'create database tally;
 
 
  create table user(
@@ -38,4 +40,4 @@
 	user_id int(32),
 	
 	foreign key(user_id) references user(id) on delete restrict on update restrict
-	);
+	);'
