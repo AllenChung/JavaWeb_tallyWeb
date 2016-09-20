@@ -14,6 +14,7 @@
 
  create database tally;
 
+
  create table user(
 	id int(32) primary key not null auto_increment,
 
@@ -21,6 +22,7 @@
 	
 	password varchar(32) not null
 	);
+
 
  create table item(
 	id int(32) primary key not null auto_increment,
