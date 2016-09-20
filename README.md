@@ -14,8 +14,8 @@
 
 2. 建立数据库：
 
-
-'''create database tally;
+'''shell
+ create database tally;
 
  create table user(
 	id int(32) primary key not null auto_increment,
