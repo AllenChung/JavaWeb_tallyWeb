@@ -14,9 +14,9 @@
 
 2. 建立数据库：
 
-<p>create database tally;
+* create database tally;
 
- create table user(
+* create table user(
 	id int(32) primary key not null auto_increment,
 
 	userName varchar(32) not null,
@@ -25,7 +25,7 @@
 	);
 
 
- create table item(
+* create table item(
 	id int(32) primary key not null auto_increment,
 
 	date date not null,
@@ -40,4 +40,3 @@
 	
 	foreign key(user_id) references user(id) on delete restrict on update restrict
 	);
-</p>
