@@ -14,8 +14,8 @@
 
 2. 建立数据库：
 
- 'create database tally;
 
+'''create database tally;
 
  create table user(
 	id int(32) primary key not null auto_increment,
@@ -40,4 +40,5 @@
 	user_id int(32),
 	
 	foreign key(user_id) references user(id) on delete restrict on update restrict
-	);'
+	);
+'''
